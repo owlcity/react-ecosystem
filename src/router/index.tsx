@@ -3,6 +3,12 @@ import { rootRoute } from "./rootRoute";
 import { aboutRoute } from "./routes/aboutRoute";
 import { indexRoute } from "./routes/indexRoute";
 import {
+  nestedPathlessLayout2Route,
+  pathlessLayoutARoute,
+  pathlessLayoutBRoute,
+  pathlessLayoutRoute,
+} from "./routes/pathlessLayoutRoute";
+import {
   postRoute,
   postsIndexRoute,
   postsLayoutRoute,
@@ -12,6 +18,12 @@ const routeTree = rootRoute.addChildren([
   indexRoute,
   aboutRoute,
   postsLayoutRoute.addChildren([postsIndexRoute, postRoute]),
+  pathlessLayoutRoute.addChildren([
+    nestedPathlessLayout2Route.addChildren([
+      pathlessLayoutARoute,
+      pathlessLayoutBRoute,
+    ]),
+  ]),
 ]);
 
 export const router = createRouter({

@@ -1,4 +1,5 @@
 import { fetchPost, fetchPosts } from "@/api/posts";
+import { PostErrorComponent } from "@/pages/posts/errorPage";
 import { PostsIndexPage } from "@/pages/posts/pageIndexPage";
 import { postComponent } from "@/pages/posts/postPage";
 import { createRoute } from "@tanstack/react-router";
@@ -19,6 +20,7 @@ export const postsIndexRoute = createRoute({
 export const postRoute = createRoute({
   getParentRoute: () => postsLayoutRoute,
   path: "$postId",
+  errorComponent: PostErrorComponent,
   loader: ({ params }) => fetchPost(params.postId),
   component: postComponent,
 });
