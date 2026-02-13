@@ -41,7 +41,7 @@ export const RootLayout = () => {
             Posts
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             to="/search"
             search={{
@@ -50,7 +50,7 @@ export const RootLayout = () => {
           >
             搜索
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link
             to="/route-a"
