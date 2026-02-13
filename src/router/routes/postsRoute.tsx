@@ -9,6 +9,7 @@ export const postsLayoutRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "posts",
   loader: () => fetchPosts(),
+  pendingComponent: () => <div>Loading posts...</div>,
 }).lazy(() => import("@pages/posts/posts.lazy").then((mod) => mod.Route));
 
 export const postsIndexRoute = createRoute({
