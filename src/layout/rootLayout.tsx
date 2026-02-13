@@ -53,6 +53,22 @@ export const RootLayout = () => {
         </li> */}
         <li>
           <Link
+            to="/users"
+            params={{ id: "123" }}
+            search={{ page: 2, sort: "id" }}
+            hash="section1"
+            replace
+            activeProps={{
+              style: {
+                fontWeight: "bold",
+              },
+            }}
+          >
+            Users
+          </Link>
+        </li>
+        <li>
+          <Link
             to="/route-a"
             activeProps={{
               className: "font-bold",

@@ -13,10 +13,12 @@ import {
   postsIndexRoute,
   postsLayoutRoute,
 } from "./routes/postsRoute";
+import { usersRoute } from "./routes/usersRoute";
 
 const routeTree = rootRoute.addChildren([
   indexRoute,
   aboutRoute,
+  usersRoute,
   postsLayoutRoute.addChildren([postsIndexRoute, postRoute]),
   pathlessLayoutRoute.addChildren([
     nestedPathlessLayout2Route.addChildren([
@@ -28,6 +30,7 @@ const routeTree = rootRoute.addChildren([
 
 export const router = createRouter({
   routeTree,
+  scrollRestoration: true,
 });
 
 declare module "@tanstack/react-router" {
