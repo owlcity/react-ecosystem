@@ -6,6 +6,8 @@ export const Route = createLazyRoute("/posts/$postId")({
 
 function PostComponent() {
   const post = Route.useLoaderData();
+  console.log("params", Route.useParams());
+  console.log("search", Route.useSearch());
 
   return (
     <div className="space-y-2">

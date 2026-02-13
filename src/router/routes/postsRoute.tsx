@@ -21,5 +21,8 @@ export const postRoute = createRoute({
   getParentRoute: () => postsLayoutRoute,
   path: "$postId",
   errorComponent: PostErrorComponent,
-  loader: ({ params }) => fetchPost(params.postId),
+  loader: ({ params }) => {
+    console.log(params);
+    return fetchPost(params.postId);
+  },
 }).lazy(() => import("@pages/posts/postPage.lazy").then((mod) => mod.Route));
