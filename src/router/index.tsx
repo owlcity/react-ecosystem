@@ -1,6 +1,7 @@
 import { createRouter } from "@tanstack/react-router";
 import { rootRoute } from "./rootRoute";
 import { aboutRoute } from "./routes/aboutRoute";
+import { deferredRoute } from "./routes/deferred";
 import { indexRoute } from "./routes/indexRoute";
 import {
   nestedPathlessLayout2Route,
@@ -19,6 +20,7 @@ const routeTree = rootRoute.addChildren([
   indexRoute,
   aboutRoute,
   usersRoute,
+  deferredRoute,
   postsLayoutRoute.addChildren([postsIndexRoute, postRoute]),
   pathlessLayoutRoute.addChildren([
     nestedPathlessLayout2Route.addChildren([

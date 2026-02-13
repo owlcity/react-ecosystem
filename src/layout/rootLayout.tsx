@@ -41,6 +41,18 @@ export const RootLayout = () => {
             Posts
           </Link>
         </li>
+        <li>
+          <Link
+            to="/deferred"
+            activeProps={{
+              style: {
+                fontWeight: "bold",
+              },
+            }}
+          >
+            Deferred
+          </Link>
+        </li>
         {/* <li>
           <Link
             to="/search"
