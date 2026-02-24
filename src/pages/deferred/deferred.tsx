@@ -7,6 +7,12 @@ export const Route = createLazyRoute("/deferred")({
 function DeferredComponent() {
   const { fastData, deferredSlowData } = Route.useLoaderData();
 
+  const match = Route.useMatch();
+
+  if (match.status === "pending" || match.isFetching) {
+    return <div>Loading...111</div>;
+  }
+
   return (
     <div className="space-y-4">
       <div>
@@ -27,7 +33,7 @@ function DeferredComponent() {
 
       <div>
         <h2>Deferred Slow Data</h2>
-        <Await promise={deferredSlowData} fallback={<div>Loading...</div>}>
+        <Await promise={deferredSlowData} fallback={<div>Loading...222</div>}>
           {(slowData) => (
             <ul className="list-disc pl-4">
               {[

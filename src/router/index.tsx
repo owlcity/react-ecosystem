@@ -35,6 +35,20 @@ export const router = createRouter({
   scrollRestoration: true,
 });
 
+export class RouterPath {
+  static root() {
+    return indexRoute.path;
+  }
+
+  static about() {
+    return aboutRoute.path;
+  }
+
+  static post() {
+    return postRoute.path;
+  }
+}
+
 declare module "@tanstack/react-router" {
   interface Register {
     router: typeof router;
