@@ -37,15 +37,19 @@ export const router = createRouter({
 
 export class RouterPath {
   static root() {
-    return indexRoute.path;
+    return indexRoute.to;
+  }
+
+  static posts() {
+    return postsLayoutRoute.to;
   }
 
   static about() {
-    return aboutRoute.path;
+    return aboutRoute.to;
   }
 
-  static post() {
-    return postRoute.path;
+  static post(postId: string) {
+    return { to: postRoute.to, params: { postId } };
   }
 }
 

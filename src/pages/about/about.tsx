@@ -13,9 +13,15 @@ export const AboutPage = () => {
         </button>
         <button
           className="bg-blue-500 text-white p-2 rounded-md cursor-pointer"
-          //   onClick={() => router.navigate({ to: RouterPath.post() })}
+          onClick={() => router.navigate({ to: RouterPath.posts() })}
         >
           go posts
+        </button>
+        <button
+          className="bg-blue-500 text-white p-2 rounded-md cursor-pointer"
+          onClick={() => router.navigate(RouterPath.post("2"))}
+        >
+          post detail 2
         </button>
       </div>
     </>
