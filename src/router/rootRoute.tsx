@@ -6,7 +6,7 @@ export const rootRoute = createRootRoute({
   notFoundComponent: () => {
     return (
       <div>
-        <p>This is the notFoundComponent configured on root route</p>
+        <p>404 Not Found</p>
         <Link to="/">Start Over</Link>
       </div>
     );

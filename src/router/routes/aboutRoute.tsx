@@ -6,4 +6,10 @@ export const aboutRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/about",
   component: AboutPage,
+  // beforeLoad: ({ params }) => {
+  //   // console.log(params);
+  //   if (!confirm("确定进入关于页面吗？")) {
+  //     throw new Error("User cancelled");
+  //   }
+  // },
 });
