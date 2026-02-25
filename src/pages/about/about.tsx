@@ -1,4 +1,5 @@
 import { router, RouterPath } from "@/router";
+import { Link } from "@tanstack/react-router";
 
 export const AboutPage = () => {
   return (
@@ -23,6 +24,15 @@ export const AboutPage = () => {
         >
           post detail 2
         </button>
+        <div>
+          <Link
+            className="bg-blue-500 text-white p-2 rounded-md cursor-pointer"
+            to="/posts/$postId"
+            params={{ postId: "2" }}
+          >
+            link-post detail 2
+          </Link>
+        </div>
       </div>
     </>
   );

@@ -31,6 +31,7 @@ export const RootLayout = () => {
         </li>
         <li>
           <Link
+            preload="intent"
             to="/posts"
             activeProps={{
               style: {
